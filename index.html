@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Java Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Java Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Getting_Started_With_Java">Getting Started With Java</a></li>
+            <li><a class="nav-link" href="#Java_Entry_point">Java Entry point</a></li>
+            <li><a class="nav-link" href="#Printing_to_the_console">Printing to the console</a></li>
+            <li><a class="nav-link" href="#Declaring_Funtions">Declaring Funtions</a></li>
+            <li><a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a></li>
+            
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Getting_Started_With_Java">
+            <header>Getting Started With Java</header>
+            <p>Steps in getting started</p>
+            <ol>
+                <li>Download Java</li>
+                <li>Doawnload Java SDK</li>
+                <li>Get an Intergrated Development Environment (IDE)</li>
+                <li>Start a project within the IDE</li>
+                <li>Code up "Hello World" and run the code</li>
+            </ol>
+        </section>
+        <section class="main-section" id="Java_Entry_point">
+            <header>Java Entry point</header>
+            <p> In the Java program entry point, the main() method of the starting class. Command line arguments are passed as an string array parameter to the main() method.</p>
+            <p> A Java application program must have a main class with a special method call main() as the execution entry point. The main() method must be defined as:</p>
+            <pre>
+                <code>
+                    public static void main(String[] a) {
+                    // statement block
+                    }
+                </code>
+            </pre>
+            <pre>
+            <p>Note that the main() method must be declared as "public static void"</p>
+            <p>The parameter of the main() method is an array of "String", which contains the additional arguments after the class name argument in the "java" command line. Let's use the following Java program to illustrate how those arguments are passed into the main() method:</p>
+            </pre>
+        </section>
+        <section class="main-section" id="Printing_to_the_console">
+            <header>Printing to the console</header>
+            <p>To print a String to console output, you can use System.out.print() or System.out.println() function.</p>
+            <p>If you have started with Java programming, System.out.print() is one of the statements that you see very often.</p>
+            <p>The only notable difference between System.out.print() and System.out.println() is that, println() appends a new line character to the string you provide as argument to the function.</p>
+            <p>Developers usually print to console when they are developing console applications, or if they would like to check some intermediary values of their program.</p>
+            <pre>
+                <code>
+                    /* Java main function example */
+                    public static void main(String[] args) {
+                    System.out.println("Hello, World!"); 
+                }
+            } 
+                </code>
+            </pre>
+            <p>In this example we are printing out "Hello World" to the console when we run the program.</p>
+        </section>
+        <section class="main-section" id="Declaring_Funtions">
+            <header>Declaring Funtions</header>
+            <p>A method is a block of code which only runs when it is called. You can pass data, known as parameters, into a method.</p>
+            <p>Methods are used to perform certain actions, and they are also known as functions.</p>
+            <img src="https://cdn.programiz.com/sites/tutorial2program/files/java-method-call.png" alt="Java-method-ing" class="image" />
+            <p>Example</p>
+
+            <pre>
+                <code>
+                    public class Main {
+                    static void myMethod() {
+                      // code to be executed
+                    }
+                  }
+                </code>
+            </pre>
+
+            <p>Example Explained</p>
+            <p>
+                <ul>
+                    <li><b>myMethod()</b> is the name of the method</li>
+                    <li><b>static</b> means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                    <li><b>void</b> means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+                </ul>
+            </p>
+            <p><b>Constants</b></p>
+            <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+            <pre>
+                <code>
+                    const PI = 3.14;
+                </code>
+            </pre>
+
+        </section>
+        <section class="main-section" id="Object_Oriented_Programming">
+            <header>Object Oriented Programming</header>
+            <p>OOP stands for Object-Oriented Programming.</p>
+            <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p>
+            <p>Object-oriented programming has several advantages over procedural programming:</p>
+            <ul>
+                <li>OOP is faster and easier to execute.</li>
+                <li>OOP provides a clear structure for the programs.</li>
+                <li>OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug.</li>
+                <li>OOP makes it possible to create full reusable applications with less code and shorter development time.</li>
+            </ul>
+            <p>Classes and objects are the two main aspects of object-oriented programming.</p>
+            <p>Example of a class in Java is as below</p>
+            <pre>
+                <code>
+                    public class Person {
+                    // class variables
+                    private String name;
+                    private int age;
+
+                    // constructor
+                    public Person(String name, int age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                
+                    // getters and setters
+                    public String getName() {
+                        return name;
+                    }
+
+                    public void setName(String name) {
+                        this.name = name;
+                    }
+
+                    public int getAge() {
+                        return age;
+                    }
+
+                    public void setAge(int age) {
+                        this.age = age;
+                    }
+                
+                    // other methods
+                    public void sayHello() {
+                        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+                    }
+                }                
+                </code>
+            </pre>
+        </section>
+        <footer>
+            <p>Documentation brought to you by Eric Ndumbi</p>
+        </footer>
+    </main>
+</body>
+</html>
